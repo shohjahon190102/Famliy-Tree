@@ -15,7 +15,6 @@ let lists = [
       }
     }
   }
-
   function addElement(){
     let name = document.getElementById("childName").value.trim();
     let father = document.getElementById("parentName").value.trim();
@@ -45,4 +44,20 @@ let lists = [
   if(lists.length === 0){
     document.getElementById("tree").style.display = "none";
   }
+}
+Tabnine|Edit|test|Explain|Document
+function findMember() {
+let res = document.getElementById("findtext").value.toString();
+const result = lists.some(element=>{
+  if(element.name === res){
+    return true;
+  }
+  return false;
+})
+if(result){
+  document.getElementById("sresult").innerHTML = "shajarada bunday shaxs mavjud"
+}
+else{
+  document.getElementById("sresult").innerHTML = "shajarada bundey shaxs mavjud emas"
+}
 }
